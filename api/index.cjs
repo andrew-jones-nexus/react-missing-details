@@ -1,6 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = 8081;
+
+app.use(cors());
 
 const mockData = [
  {
@@ -15,19 +18,19 @@ const mockData = [
  },
  {
   vehicleReg: "XYZ789",
-  type: "SUV",
-  color: "Red",
+  type: "hatchback",
+  color: null,
   engineSize: 2.0,
   insured: true,
   taxed: true,
-  make: "Toyota",
-  mileage: 50000,
+  make: null,
+  mileage: null,
  },
  {
-  vehicleReg: "LMN456",
-  type: "Sedan",
+  vehicleReg: null,
+  type: "coupe",
   color: "Blue",
-  engineSize: 1.8,
+  engineSize: null,
   insured: false,
   taxed: false,
   make: "Honda",
